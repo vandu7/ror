@@ -1,0 +1,42 @@
+<!--<p id="notice"><%= notice %></p>
+
+<h1>Logins</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Userid</th>
+      <th>Password</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @logins.each do |login| %>
+      <tr>
+        <td><%= login.Userid %></td>
+        <td><%= login.Password %></td>
+        <td><%= link_to 'Show', login %></td>
+        <td><%= link_to 'Edit', edit_login_path(login) %></td>
+        <td><%= link_to 'Destroy', login, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Login', new_login_path %>-->
+
+<% if user1_signed_in? %>
+<!--<li><%= link_to current_user1.email, edit_user1_registration_path %></li>-->
+<h2><b><i><font size="6">USER PORTAL</font></b></i></h2>
+<li><%= link_to 'FillExpenseDetails', new_expense_path %></li><br />
+<li><%= link_to 'View report', new_login_path %></li><br />
+<li><%= link_to "Logout", destroy_user1_session_path, method: :delete %></li><br />
+<% else %>
+<h2><b><i><font size="6">WELCOME TO NIT CALICUT TATHVA PORTAL</font></b></i></h2>
+<li><%= link_to 'SignUp', new_user1_registration_path %></li><br />
+<li><%= link_to 'Login', new_user1_session_path %></li><br />
+<li><%= link_to 'Admin', new_admin_path %></li><br />
+<% end %>

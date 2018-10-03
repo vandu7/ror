@@ -1,0 +1,2 @@
+module Interpage2sHelper
+end

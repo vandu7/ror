@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  EventName: MyString
+  Rollno: MyString
+  Amount: 1
+  Justification: MyString
+  Status: false
+
+two:
+  EventName: MyString
+  Rollno: MyString
+  Amount: 1
+  Justification: MyString
+  Status: false

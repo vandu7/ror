@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Name: MyString
+  Userid: MyString
+  Password: MyString
+  Batch: 1
+  Branch: MyString
+  Email: MyString
+
+two:
+  Name: MyString
+  Userid: MyString
+  Password: MyString
+  Batch: 1
+  Branch: MyString
+  Email: MyString

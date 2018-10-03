@@ -1,0 +1,37 @@
+<p id="notice"><%= notice %></p>
+
+<h2><b><i><font size="6">Expenses</font></i></b></h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Eventname</th>
+      <th>Rollno</th>
+      <th>Amount</th>
+      <th>Justification</th>
+      <th>Status</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @expenses.each do |expense| %>
+      <tr>
+        <td><%= expense.EventName %></td>
+        <td><%= expense.Rollno %></td>
+        <td><%= expense.Amount %></td>
+        <td><%= expense.Justification %></td>
+        <td><%= expense.Status %></td>
+
+      <!--  <td><%= link_to 'Accept', edit_expense_path(expense) %></td>-->
+      <td><%= link_to 'Accept', {:controller=>'expenses',:action => 'accept',:u_id=>expense.id} %></td>
+      <!--<td><%= link_to 'Accept', expense, method: :show  %></td>-->
+      <!--<td><%= link_to 'Reject', expense, method: :delete, data: { confirm: 'Are you sure?' } %></td>-->
+      <!--<td><%= link_to 'Reject', {:controller=>'expenses',:action => 'destroy',:id=>expense.id}%></td>-->
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+<%= link_to 'Logout', logins_url %>

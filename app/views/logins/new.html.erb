@@ -1,0 +1,40 @@
+<!--<h1>New Login</h1>
+
+<%= render 'form', login: @login %>
+
+<%= link_to 'Register', new_user_path %>
+
+
+<%= link_to 'Admin', new_admin_path %>-->
+<p id="notice"><%= notice %></p>
+
+<h2><b><i><font size="6">APPROVED EXPENSE REQUESTS</font></b></i></h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Eventname</th>
+      <th>Rollno</th>
+      <th>Amount</th>
+      <th>Justification</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @expenses.each do |expense| %>
+    <% if expense.Status==true %>
+      <tr>
+        <td><%= expense.EventName %></td>
+        <td><%= expense.Rollno %></td>
+        <td><%= expense.Amount %></td>
+        <td><%= expense.Justification %></td>
+
+        <!--<td><%= link_to 'Accept', edit_expense_path(expense) %></td>-->
+      </tr>
+      <% end %>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
