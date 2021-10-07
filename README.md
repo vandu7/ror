@@ -22,3 +22,5 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+For more information chech into official website:
+https://guides.rubyonrails.org/
